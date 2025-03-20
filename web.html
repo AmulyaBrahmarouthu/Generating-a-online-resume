@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        
+        <div class="form-container">
+            <form id="resume-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
+                <label for="skills">Skills (separate with commas)</label>
+                <input type="text" id="skills" name="skills" placeholder="Enter your skills" required><br><br>
+
+                <label for="experience">Work Experience</label>
+                <textarea id="experience" name="experience" placeholder="Enter your work experience" required></textarea><br><br>
+
+                <label for="education">Education</label>
+                <textarea id="education" name="education" placeholder="Enter your education details" required></textarea><br><br>
+
+                <button type="button" id="generate-pdf">Generate Resume PDF</button>
+            </form>
+        </div>
+
+        <div class="preview-container">
+            <h2>Live Preview</h2>
+            <div id="resume-preview" class="resume-preview">
+                <h3 id="preview-name">Your Name</h3>
+                <p id="preview-email">Email: example@example.com</p>
+                <p id="preview-phone">Phone: 123-456-7890</p>
+                <p id="preview-address">Address: Your Address</p>
+                <h4>Skills:</h4>
+                <p id="preview-skills">Skill1, Skill2, Skill3</p>
+                <h4>Experience:</h4>
+                <p id="preview-experience">Your work experience details.</p>
+                <h4>Education:</h4>
+                <p id="preview-education">Your education details.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="web.js"></script>
+</body>
+</html>
